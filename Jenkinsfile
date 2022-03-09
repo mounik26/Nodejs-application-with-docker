@@ -1,16 +1,16 @@
 pipeline {
   agent any
     
-  tools {nodejs "nodejs"}
+  tools {nodejs "NodeJS"}
     
   stages {
         
     stage('Build') {
       steps {
         sh """
-        docker build -t kiransun1/nodejs-pipeline-01 -f Dockerfile .
-        docker push kiransun1/nodejs-pipeline-01
-        docker run -p 3032:9005 -d --name node-js-pipeline kiransun1/nodejs-pipeline-01:latest
+        docker build -t kiyansh26/nodejs-pipeline-01 -f Dockerfile .
+        docker push kiyansh26/nodejs-pipeline-01
+        docker run -p 9000:9000 -d --name node-js-pipeline kiyansh26/nodejs-pipeline-01:latest
         """
       }
     }  
