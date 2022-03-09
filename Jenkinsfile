@@ -1,7 +1,7 @@
-pipeline {
+spipeline {
   agent any
     
-  tools {nodejs "NodeJS"}
+  tools {nodejs "nodejs"}
     
   stages {
         
